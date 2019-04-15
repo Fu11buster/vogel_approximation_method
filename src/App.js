@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+
+import Main from './components/main/main';
+import Solve from './components/solve/solve';
 import './App.css';
+
+import { updateState } from './actions/actionCreator';
+
+import solveMatrix from './logic/logic';
 
 class App extends Component {
   render() {
+    const {matrix, storage, needs, updateState} = this.props;
+    solveMatrix(matrix, storage, needs, updateState);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Метод аппроксимации Фогеля</h1>
+        <Main />
+        <Solve />
       </div>
     );
   }
 }
 
-export default App;
+export default connect(({ matrix }) => ({
+  matrix: matrix.data,
+  storage: matrix.storage,
+  needs: matrix.needs
+}), { updateState })(App);

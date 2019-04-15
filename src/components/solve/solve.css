@@ -1,0 +1,17 @@
+section.solve {
+  background-color: #eee;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+section.solve h2 {
+  margin: 0;
+}
+
+.volume {
+  display: flex;
+}
+
+.volume p {
+  margin: 0 40px 0 0;
+}

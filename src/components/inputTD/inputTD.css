@@ -1,0 +1,27 @@
+td {
+  padding: 0;
+  text-align: center;
+  height: 25px;
+}
+
+td.text {
+  padding: 0 7px;
+}
+
+td.green {
+  background-color: rgb(99, 236, 168);
+}
+
+td.green input {
+  background-color: rgb(99, 236, 168);
+}
+
+td input {
+  width: 100%;
+  border: none;
+  height: 100%;
+  text-align: center;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+}

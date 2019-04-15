@@ -1,0 +1,25 @@
+td[data-price] {
+  position: relative;
+  font-size: 80%;
+  text-align: left;
+  padding-left: 3px;
+}
+
+td[data-price]::after {
+  content: attr(data-price);
+  text-align: center;
+  font-size: 70%;
+  position: absolute;
+  display: block;
+  height: 50%;
+  width: 40%;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(252, 160, 55);
+}
+td.maxDiff {
+  background-color: rgb(240, 69, 69);
+}
+td.disabled {
+  background-color: rgb(204, 204, 204);
+}
